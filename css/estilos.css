@@ -1,13 +1,8 @@
-/* =============================================
-ESTILOS PET SPA - Tema Profesional y Suave
-Paleta: Azul grisáceo, blanco y toques cálidos
- */
-
-/* Reset básico y fuente del sitio */
+/* ESTILOS GENERALES (Amigables y Suaves) */
 body {
-    font-family: 'Segoe UI', Tahoma, sans-serif;
-    background-color: #f5f7fa;
-    color: #4a5568;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f4f8; /* Fondo gris azulado claro */
+    color: #333;
     margin: 0;
     padding: 0;
     display: flex;
@@ -16,190 +11,110 @@ body {
     min-height: 100vh;
 }
 
-/* --- LOGO Y MARCA --- */
-.logo-container {
-    text-align: center;
-    margin-top: 30px;
-    margin-bottom: 20px;
-}
-
-.logo-img {
-    width: 120px;
-    height: auto;
-    display: block;
-    margin: 0 auto 10px auto;
-}
-
-.brand-title {
-    color: #2d3748;
-    font-size: 24px;
-    margin: 0;
-    font-weight: 600;
-}
-
-/* --- CONTENEDOR PRINCIPAL (Login, Registro, etc) --- */
-.contenedor-auth {
-    background-color: #ffffff;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-    width: 350px;
-    margin-top: 20px;
-    margin-bottom: 50px;
-    text-align: center;
-}
-
-/* --- TÍTULOS --- */
-h2, h3 {
-    margin-bottom: 25px;
-    color: #2d3748;
-    font-weight: 600;
-}
-
-h3 {
-    font-size: 18px;
-}
-
-/* --- FORMULARIOS --- */
-label {
-    display: block;
-    text-align: left;
-    margin-bottom: 6px;
-    color: #718096;
-    font-size: 13px;
-    font-weight: 500;
-}
-
-input, select, textarea {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 18px;
-    background-color: #f7fafc;
-    border: 1px solid #e2e8f0;
-    color: #2d3748;
-    border-radius: 6px;
-    box-sizing: border-box;
-    transition: border-color 0.2s;
-}
-
-/* Cuando el usuario hace click en el campo */
-input:focus, select:focus, textarea:focus {
-    border-color: #667eea;
-    outline: none;
-    background-color: #fff;
-}
-
-/* --- BOTONES --- */
-button {
-    width: 100%;
-    padding: 12px;
-    background-color: #667eea;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    font-weight: 600;
-    font-size: 14px;
-    cursor: pointer;
-    margin-top: 10px;
-    transition: background-color 0.2s;
-}
-
-/* Efecto al pasar el mouse */
-button:hover {
-    background-color: #5a67d8;
-}
-
-/* Botón de WhatsApp - verde suave */
-button[onclick*="WhatsApp"] {
-    background-color: #48bb78;
-}
-button[onclick*="WhatsApp"]:hover {
-    background-color: #38a169;
-}
-
-/* --- MENSAJES (errores, éxito, etc) --- */
-.mensaje {
-    margin-top: 20px;
-    font-size: 14px;
-    padding: 10px;
-    border-radius: 6px;
-}
-
-/* --- ENLACES --- */
-a {
-    color: #667eea;
-    text-decoration: none;
-    font-size: 13px;
-}
-a:hover {
-    text-decoration: underline;
-}
-
-/*
-DASHBOARD - Barra de navegación y secciones
- */
-
+/* BARRA DE NAVEGACIÓN */
 .nav-bar {
     width: 100%;
     background-color: #ffffff;
     padding: 15px 20px;
-    text-align: center;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
     display: flex;
     justify-content: space-between;
     align-items: center;
     box-sizing: border-box;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
-/* Botones del menú - estilo suave */
+.menu-buttons {
+    display: flex;
+    gap: 10px;
+}
+
 .nav-bar button {
-    width: auto;
-    margin: 0;
-    padding: 10px 18px;
-    background-color: #edf2f7;
-    color: #4a5568;
-    border-radius: 6px;
-    box-shadow: none;
+    padding: 10px 20px;
+    background-color: #eef2f7;
+    color: #2c3e50;
+    border: none;
+    border-radius: 20px; /* Botones redondeados */
     font-size: 14px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.2s;
 }
 
 .nav-bar button:hover {
-    background-color: #e2e8f0;
+    background-color: #dfe6ed;
 }
 
-/* Botón de salir - rojo suave */
-.nav-bar button[onclick*="index.html"] {
-    background-color: #fed7d7;
-    color: #c53030;
-}
-.nav-bar button[onclick*="index.html"]:hover {
-    background-color: #feb2b2;
-}
-
-/* --- SECCIONES DEL DASHBOARD --- */
+/* SECCIONES PRINCIPALES (Contenedores blancos) */
 .seccion {
-    display: none;
+    display: none; /* Se ocultan por defecto */
     width: 90%;
-    max-width: 900px;
+    max-width: 800px;
     background-color: #ffffff;
     padding: 30px;
     margin-top: 30px;
     margin-bottom: 50px;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
 }
 
-.seccion h3 {
-    color: #2d3748;
-    border-bottom: 1px solid #e2e8f0;
+h3 {
+    color: #2c3e50;
+    border-bottom: 2px solid #f0f4f8;
     padding-bottom: 15px;
+    margin-top: 0;
 }
 
-/* 
-TIENDA - Catálogo de productos
- */
+/* INPUTS, SELECTS Y LABELS GLOBALES */
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+    font-size: 13px;
+    font-weight: 500;
+    margin-top: 15px;
+}
 
-/* Grid que acomoda los productos */
+input, select {
+    width: 100%;
+    padding: 12px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    color: #333;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+input:focus, select:focus {
+    border-color: #4facfe;
+    outline: none;
+    background-color: #fff;
+}
+
+/* BOTONES GENERALES */
+button {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(to right, #4facfe, #00f2fe); /* Azul moderno */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: 25px;
+    box-shadow: 0 4px 6px rgba(79, 172, 254, 0.3);
+    transition: transform 0.1s;
+}
+
+button:hover {
+    transform: translateY(-1px);
+}
+
+/* ESTILOS ESPECÍFICOS DE TIENDA */
 .grid-productos {
     display: flex;
     flex-wrap: wrap;
@@ -208,95 +123,69 @@ TIENDA - Catálogo de productos
     padding: 20px 0;
 }
 
-/* Cada tarjeta de producto */
 .producto-card {
     background-color: #ffffff;
-    border: 1px solid #e2e8f0;
-    padding: 20px;
+    border: 1px solid #eef2f7;
+    padding: 15px;
     width: 200px;
     text-align: center;
-    border-radius: 10px;
-    transition: box-shadow 0.2s, transform 0.2s;
+    border-radius: 12px;
+    transition: box-shadow 0.3s, transform 0.3s;
 }
 
-/* Efecto hover - sube un poco la tarjeta */
 .producto-card:hover {
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    transform: translateY(-5px);
 }
 
-/* Imagen del producto */
-.producto-card img,
-.producto-img {
+.producto-card img {
     width: 100%;
-    height: 140px;
+    height: 150px;
     object-fit: contain;
-    margin-bottom: 12px;
-    border-radius: 6px;
-    background-color: #f7fafc;
-    padding: 8px;
-    box-sizing: border-box;
+    margin-bottom: 10px;
+    padding: 5px;
 }
 
 .producto-card h4 {
     margin: 10px 0;
-    color: #2d3748;
+    color: #2c3e50;
     font-size: 15px;
-    font-weight: 600;
 }
 
-/* Precio - color destacado pero suave */
 .producto-card p {
-    color: #667eea;
-    font-weight: 600;
+    color: #4facfe;
+    font-weight: bold;
     font-size: 16px;
-    margin-bottom: 12px;
 }
 
-/* Botón agregar - color cálido */
 .producto-card button {
-    width: 100%;
+    margin-top: 10px;
     padding: 10px;
     font-size: 13px;
-    background-color: #ed8936;
-}
-.producto-card button:hover {
-    background-color: #dd6b20;
+    background: linear-gradient(to right, #ff7e5f, #feb47b); /* Naranja para 'Agregar' */
+    box-shadow: 0 4px 6px rgba(255, 126, 95, 0.3);
 }
 
-/* 
-EXTRAS - Contraseña, checkboxes, etc
- */
-
-/* Contenedor para input con icono de ojo */
-.input-group {
-    position: relative;
+.carrito-container {
+    margin-top: 30px;
+    border-top: 2px solid #f0f4f8;
+    padding-top: 20px;
 }
 
-.ojo-icono {
-    position: absolute;
-    right: 15px;
-    top: 38px;
+.btn-whatsapp {
+    background: linear-gradient(to right, #25D366, #128C7E); /* Verde WhatsApp */
+    box-shadow: 0 4px 6px rgba(37, 211, 102, 0.3);
+}
+
+/* CHECKBOXES GROOMING */
+.checklist-container label {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
     cursor: pointer;
-    color: #a0aec0;
-    font-size: 18px;
 }
-
-.ojo-icono:hover {
-    color: #667eea;
-}
-
-/* Checkboxes del grooming */
 input[type="checkbox"] {
     width: auto;
     margin-right: 10px;
-    accent-color: #667eea;
-}
-
-.checklist-container label {
-    display: inline-block;
-    margin-bottom: 15px;
-    cursor: pointer;
-    font-weight: normal;
-    color: #4a5568;
+    accent-color: #4facfe;
 }
