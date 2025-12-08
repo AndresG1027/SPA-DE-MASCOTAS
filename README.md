@@ -47,13 +47,3 @@ spa de mascotas/
 * **CSS3** - Estilos y diseño responsivo
 * **JavaScript (ES5)** - Lógica del sistema (sin frameworks)
 * **localStorage** - Persistencia de datos en el navegador
-
----
-
-## 🚀 Cómo Usar
-
-1. Abre `index.html` en tu navegador.
-2. Si no tienes cuenta, ve a **Registrarse**.
-3. Completa el formulario con datos válidos.
-4. Inicia sesión con tu correo y contraseña.
-5. Explora el Dashboard: Agenda, Grooming y Tienda.
