@@ -19,21 +19,17 @@
     <div id="sec-agenda" class="seccion" style="display:block;">
         <h3>📅 Agendar Cita</h3>
         <p style="color:#666; font-size:14px;">Reserva un turno para el servicio de spa.</p>
-        
         <form onsubmit="agendarCita(event)">
             <label>Fecha del turno:</label>
             <input type="date" id="cita-fecha" required>
-            
             <label>Hora:</label>
             <input type="time" id="cita-hora" required>
-
             <label>Tipo de Servicio:</label>
             <select id="cita-servicio">
                 <option value="Bano Simple">🛁 Baño Simple (30 min)</option>
                 <option value="Bano y Corte">✂️ Baño y Corte (60 min)</option>
                 <option value="Spa Completo">✨ Spa Completo (90 min)</option>
             </select>
-
             <button type="submit">Confirmar Reserva</button>
         </form>
     </div>
@@ -41,27 +37,16 @@
     <div id="sec-grooming" class="seccion">
         <h3>✂️ Ficha de Servicio de Grooming</h3>
         <p style="color:#666; font-size:14px;">Registra los detalles del servicio realizado.</p>
-
         <form onsubmit="guardarFicha(event)">
             <label>Nombre de la Mascota:</label>
             <input type="text" id="ficha-mascota" placeholder="Ej: Firulais" required>
-
             <h4 style="color:#2c3e50; margin-top:20px;">Checklist de Tareas Realizadas:</h4>
             <div class="checklist-container">
-                <label>
-                    <input type="checkbox" id="check-banio"> Baño con Shampoo
-                </label><br>
-                <label>
-                    <input type="checkbox" id="check-corte"> Corte de Pelo / Rapado
-                </label><br>
-                <label>
-                    <input type="checkbox" id="check-unias"> Corte y limado de Uñas
-                </label><br>
-                 <label>
-                    <input type="checkbox" id="check-oidos"> Limpieza de Oídos
-                </label>
+                <label><input type="checkbox" id="check-banio"> Baño con Shampoo</label><br>
+                <label><input type="checkbox" id="check-corte"> Corte de Pelo / Rapado</label><br>
+                <label><input type="checkbox" id="check-unias"> Corte y limado de Uñas</label><br>
+                 <label><input type="checkbox" id="check-oidos"> Limpieza de Oídos</label>
             </div>
-
             <button type="submit" style="background: linear-gradient(to right, #4facfe, #00f2fe);">Guardar Ficha Técnica</button>
         </form>
     </div>
@@ -70,7 +55,37 @@
         <h3>🛒 Catálogo de Productos</h3>
         <p style="color:#666; font-size:14px;">Agrega productos al carrito y pide por WhatsApp.</p>
         
-        <div id="lista-productos" class="grid-productos"></div>
+        <div class="grid-productos">
+            
+            <div class="producto-card">
+                <img src="imagenes/shampoo de avena mascotas.png" alt="Shampoo Avena">
+                <h4>Shampoo Avena</h4>
+                <p>Precio: 50 Bs</p>
+                <button onclick="agregarAlCarrito('Shampoo Avena', 50)">Agregar al Carrito</button>
+            </div>
+
+            <div class="producto-card">
+                <img src="imagenes/hueso-juguete.png" alt="Juguete Hueso">
+                <h4>Juguete Hueso</h4>
+                <p>Precio: 25 Bs</p>
+                <button onclick="agregarAlCarrito('Juguete Hueso', 25)">Agregar al Carrito</button>
+            </div>
+
+            <div class="producto-card">
+                <img src="imagenes/comidaPerro.jpg" alt="Alimento 1kg">
+                <h4>Alimento 1kg</h4>
+                <p>Precio: 40 Bs</p>
+                <button onclick="agregarAlCarrito('Alimento 1kg', 40)">Agregar al Carrito</button>
+            </div>
+
+            <div class="producto-card">
+                <img src="imagenes/correa.png" alt="Correa Paseo">
+                <h4>Correa Paseo</h4>
+                <p>Precio: 60 Bs</p>
+                <button onclick="agregarAlCarrito('Correa Paseo', 60)">Agregar al Carrito</button>
+            </div>
+
+        </div>
 
         <div class="carrito-container">
             <h3>Tu Carrito</h3>
