@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="nav-bar">
-        <h2 style="margin:0; font-size: 20px;">🐶 SPA DE MASCOTAS</h2>
+        <h2 style="margin:0; font-size: 20px;">🐶 PET SPA SYSTEM</h2>
         <div class="menu-buttons">
             <button onclick="mostrarSeccion('sec-agenda')">📅 Agenda</button>
             <button onclick="mostrarSeccion('sec-grooming')">✂️ Grooming</button>
@@ -47,7 +47,8 @@
                 <label><input type="checkbox" id="check-unias"> Corte y limado de Uñas</label><br>
                  <label><input type="checkbox" id="check-oidos"> Limpieza de Oídos</label>
             </div>
-            <button type="submit" style="background: linear-gradient(to right, #4facfe, #00f2fe);">Guardar Ficha Técnica</button>
+            
+            <button type="submit" style="background-color: #4facfe;">Guardar Ficha Técnica</button>
         </form>
     </div>
 
@@ -56,35 +57,30 @@
         <p style="color:#666; font-size:14px;">Agrega productos al carrito y pide por WhatsApp.</p>
         
         <div class="grid-productos">
-            
             <div class="producto-card">
                 <img src="imagenes/shampoo de avena mascotas.png" alt="Shampoo Avena">
                 <h4>Shampoo Avena</h4>
                 <p>Precio: 50 Bs</p>
                 <button onclick="agregarAlCarrito('Shampoo Avena', 50)">Agregar al Carrito</button>
             </div>
-
             <div class="producto-card">
                 <img src="imagenes/hueso-juguete.png" alt="Juguete Hueso">
                 <h4>Juguete Hueso</h4>
                 <p>Precio: 25 Bs</p>
                 <button onclick="agregarAlCarrito('Juguete Hueso', 25)">Agregar al Carrito</button>
             </div>
-
             <div class="producto-card">
                 <img src="imagenes/comidaPerro.jpg" alt="Alimento 1kg">
                 <h4>Alimento 1kg</h4>
                 <p>Precio: 40 Bs</p>
                 <button onclick="agregarAlCarrito('Alimento 1kg', 40)">Agregar al Carrito</button>
             </div>
-
             <div class="producto-card">
                 <img src="imagenes/correa.png" alt="Correa Paseo">
                 <h4>Correa Paseo</h4>
                 <p>Precio: 60 Bs</p>
                 <button onclick="agregarAlCarrito('Correa Paseo', 60)">Agregar al Carrito</button>
             </div>
-
         </div>
 
         <div class="carrito-container">
@@ -97,4 +93,3 @@
     <script src="js/app.js"></script>
 </body>
 </html>
-
