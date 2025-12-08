@@ -1,8 +1,8 @@
-/* ESTILOS GENERALES (Amigables y Suaves) */
+/* ESTILOS GENERALES */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f0f4f8; /* Fondo gris azulado claro */
-    color: #333;
+    font-family: Arial, sans-serif; 
+    background-color: #f4f4f4; 
+    color: #333; 
     margin: 0;
     padding: 0;
     display: flex;
@@ -14,9 +14,9 @@ body {
 /* BARRA DE NAVEGACIÓN */
 .nav-bar {
     width: 100%;
-    background-color: #ffffff;
+    background-color: #ffffff; 
     padding: 15px 20px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    border-bottom: 1px solid #ddd; 
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -33,88 +33,80 @@ body {
 
 .nav-bar button {
     padding: 10px 20px;
-    background-color: #eef2f7;
-    color: #2c3e50;
-    border: none;
-    border-radius: 20px; /* Botones redondeados */
+    background-color: #e0e0e0; 
+    color: #000; 
+    border: 1px solid #ccc; 
     font-size: 14px;
     cursor: pointer;
-    font-weight: 600;
-    transition: background-color 0.2s;
+    font-weight: bold;
 }
 
 .nav-bar button:hover {
-    background-color: #dfe6ed;
+    background-color: #d0d0d0;
 }
 
-/* SECCIONES PRINCIPALES (Contenedores blancos) */
+/* SECCIONES PRINCIPALES */
 .seccion {
-    display: none; /* Se ocultan por defecto */
+    display: none;
     width: 90%;
     max-width: 800px;
     background-color: #ffffff;
     padding: 30px;
     margin-top: 30px;
     margin-bottom: 50px;
-    border-radius: 12px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    border: 1px solid #ddd; 
 }
 
 h3 {
-    color: #2c3e50;
-    border-bottom: 2px solid #f0f4f8;
+    color: #000; 
+    border-bottom: 2px solid #eee;
     padding-bottom: 15px;
     margin-top: 0;
 }
 
-/* INPUTS, SELECTS Y LABELS GLOBALES */
+/* INPUTS Y LABELS */
 label {
     display: block;
     margin-bottom: 8px;
-    color: #555;
+    color: #000;
     font-size: 13px;
-    font-weight: 500;
+    font-weight: bold;
     margin-top: 15px;
 }
 
 input, select {
     width: 100%;
-    padding: 12px;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    color: #333;
-    border-radius: 8px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #999; 
+    color: #000;
     box-sizing: border-box;
     font-family: inherit;
 }
 
 input:focus, select:focus {
-    border-color: #4facfe;
+    border-color: #000; 
     outline: none;
-    background-color: #fff;
 }
 
 /* BOTONES GENERALES */
 button {
     width: 100%;
     padding: 14px;
-    background: linear-gradient(to right, #4facfe, #00f2fe); /* Azul moderno */
+    background-color: #007bff; 
     color: white;
     border: none;
-    border-radius: 8px;
     font-weight: bold;
     font-size: 15px;
     cursor: pointer;
     margin-top: 25px;
-    box-shadow: 0 4px 6px rgba(79, 172, 254, 0.3);
-    transition: transform 0.1s;
 }
 
 button:hover {
-    transform: translateY(-1px);
+    background-color: #0056b3; 
 }
 
-/* ESTILOS ESPECÍFICOS DE TIENDA */
+/* ESTILOS DE TIENDA */
 .grid-productos {
     display: flex;
     flex-wrap: wrap;
@@ -125,17 +117,10 @@ button:hover {
 
 .producto-card {
     background-color: #ffffff;
-    border: 1px solid #eef2f7;
+    border: 1px solid #ddd;
     padding: 15px;
     width: 200px;
     text-align: center;
-    border-radius: 12px;
-    transition: box-shadow 0.3s, transform 0.3s;
-}
-
-.producto-card:hover {
-    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
-    transform: translateY(-5px);
 }
 
 .producto-card img {
@@ -144,16 +129,17 @@ button:hover {
     object-fit: contain;
     margin-bottom: 10px;
     padding: 5px;
+    border: 1px solid #eee; 
 }
 
 .producto-card h4 {
     margin: 10px 0;
-    color: #2c3e50;
+    color: #000;
     font-size: 15px;
 }
 
 .producto-card p {
-    color: #4facfe;
+    color: #000;
     font-weight: bold;
     font-size: 16px;
 }
@@ -162,19 +148,23 @@ button:hover {
     margin-top: 10px;
     padding: 10px;
     font-size: 13px;
-    background: linear-gradient(to right, #ff7e5f, #feb47b); /* Naranja para 'Agregar' */
-    box-shadow: 0 4px 6px rgba(255, 126, 95, 0.3);
+    background-color: #28a745; 
+}
+.producto-card button:hover {
+    background-color: #218838;
 }
 
 .carrito-container {
     margin-top: 30px;
-    border-top: 2px solid #f0f4f8;
+    border-top: 2px solid #eee;
     padding-top: 20px;
 }
 
 .btn-whatsapp {
-    background: linear-gradient(to right, #25D366, #128C7E); /* Verde WhatsApp */
-    box-shadow: 0 4px 6px rgba(37, 211, 102, 0.3);
+    background-color: #25d366; 
+}
+.btn-whatsapp:hover {
+    background-color: #128c7e;
 }
 
 /* CHECKBOXES GROOMING */
@@ -183,9 +173,9 @@ button:hover {
     align-items: center;
     margin-top: 10px;
     cursor: pointer;
+    font-weight: normal;
 }
 input[type="checkbox"] {
     width: auto;
     margin-right: 10px;
-    accent-color: #4facfe;
 }
