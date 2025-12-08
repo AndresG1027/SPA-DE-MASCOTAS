@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Pet Spa</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <div class="nav-bar">
+        <h2 style="margin:0 0 15px 0;">🐶 PET SPA SYSTEM</h2>
+        <button onclick="mostrarSeccion('sec-agenda')">📅 Agenda</button>
+        <button onclick="mostrarSeccion('sec-grooming')">✂️ Grooming</button>
+        <button onclick="mostrarSeccion('sec-tienda')">🛒 Tienda</button>
+        <button onclick="window.location.href='index.html'" style="background-color:#da3633; color:white;">🚪 Salir</button>
+    </div>
+
+    <div id="sec-agenda" class="seccion" style="display:block;"> <h3>Agendar Cita</h3>
+        <form onsubmit="agendarCita(event)">
+            <label>Fecha:</label>
+            <input type="date" id="cita-fecha">
+            
+            <label>Hora:</label>
+            <input type="time" id="cita-hora">
+
+            <label>Servicio:</label>
+            <select id="cita-servicio">
+                <option value="Bano">Baño Simple (30 min)</option>
+                <option value="Completo">Baño y Corte (60 min)</option>
+                <option value="Spa">Spa Completo (90 min)</option>
+            </select>
+
+            <button type="submit">Reservar Turno</button>
+        </form>
+    </div>
+
+    <div id="sec-grooming" class="seccion">
+        <h3>Ficha de Servicio</h3>
+        <form onsubmit="guardarFicha(event)">
+            <label>Nombre Mascota:</label>
+            <input type="text" id="ficha-mascota" placeholder="Ej: Firulais">
+
+            <h4>Checklist de Servicio:</h4>
+            <div style="text-align:left; margin-bottom:15px;">
+                <input type="checkbox" id="check-banio" style="width:auto;"> <label style="display:inline;">Baño</label><br>
+                <input type="checkbox" id="check-corte" style="width:auto;"> <label style="display:inline;">Corte de Pelo</label><br>
+                <input type="checkbox" id="check-unias" style="width:auto;"> <label style="display:inline;">Corte de Uñas</label>
+            </div>
+
+            <button type="submit">Guardar Ficha</button>
+        </form>
+    </div>
+
+    <div id="sec-tienda" class="seccion">
+        <h3>Catálogo de Productos</h3>
+        
+        <div id="lista-productos" class="grid-productos">
+            <!-- Producto 1 -->
+            <div class="producto-card">
+                <img src="imagenes/shampoo de avena mascotas.png" alt="Shampoo Avena" class="producto-img">
+                <h4>Shampoo Avena</h4>
+                <p>Precio: 50 Bs</p>
+                <button onclick="agregarAlCarrito('Shampoo Avena', 50)">Agregar</button>
+            </div>
+
+            <!-- Producto 2 -->
+            <div class="producto-card">
+                <img src="imagenes/hueso-juguete.png" alt="Juguete Hueso" class="producto-img">
+                <h4>Juguete Hueso</h4>
+                <p>Precio: 25 Bs</p>
+                <button onclick="agregarAlCarrito('Juguete Hueso', 25)">Agregar</button>
+            </div>
+
+            <!-- Producto 3 -->
+            <div class="producto-card">
+                <img src="imagenes/comidaPerro.jpg" alt="Alimento 1kg" class="producto-img">
+                <h4>Alimento 1kg</h4>
+                <p>Precio: 40 Bs</p>
+                <button onclick="agregarAlCarrito('Alimento 1kg', 40)">Agregar</button>
+            </div>
+
+            <!-- Producto 4 -->
+            <div class="producto-card">
+                <img src="imagenes/correa.png" alt="Correa Paseo" class="producto-img">
+                <h4>Correa Paseo</h4>
+                <p>Precio: 60 Bs</p>
+                <button onclick="agregarAlCarrito('Correa Paseo', 60)">Agregar</button>
+            </div>
+        </div>
+
+        <div style="margin-top:30px; border-top:1px solid #333; padding-top:10px;">
+            <h3>Carrito</h3>
+            <p>Total a Pagar: <span id="carrito-total" style="color:#58a6ff; font-weight:bold;">0 Bs</span></p>
+            <button onclick="comprarWhatsApp()" style="background-color:#25D366;">Pedir por WhatsApp 📱</button>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
