@@ -76,8 +76,9 @@ function comprarWhatsApp() {
     mensaje = mensaje + " Total: " + total + "Bs";
 
     // Codificar para URL
-    var url = "https://wa.me/591XXXXXXXX?text=" + encodeURIComponent(mensaje);
+    var url = "https://wa.me/59163141333?text=" + encodeURIComponent(mensaje);
     
     // Abrir en nueva pestaña
     window.open(url, "_blank");
+
 }
